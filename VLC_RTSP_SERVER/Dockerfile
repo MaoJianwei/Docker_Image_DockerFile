@@ -5,6 +5,8 @@ RUN apt-get update \
     && apt-get install -y vlc \
     && rm -rf /var/lib/apt/lists/*
 
+RUN useradd mao
+
 EXPOSE 5511
 
-CMD ["cvlc", "/home/maoMedia", "--sout '#rtp{sdp=rtsp://:5511/}'", "--sout-keep", "--quiet"]
+CMD ["su", "mao", "-c", "\"", "cvlc", "/home/maoMedia", "--sout '#rtp{sdp=rtsp://:5511/}'", "--sout-keep", "--quiet", "\""]
