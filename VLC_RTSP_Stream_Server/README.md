@@ -1,13 +1,9 @@
 # VLC RTSP Media Stream Server
 
 Use docker run's -v flag to mount a directory to container's /home,
-
 and put your media file in it and rename to 'maoMedia',
-
 Finally, VLC will automatically stream the file:  /home/maoMedia
-
 at the expose port 5511
-
 
 
 ### Example
