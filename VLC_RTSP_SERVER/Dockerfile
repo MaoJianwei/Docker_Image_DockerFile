@@ -9,4 +9,4 @@ RUN useradd mao
 
 EXPOSE 5511
 
-CMD ["su", "mao", "-c", "\"", "cvlc", "/home/maoMedia", "--sout '#rtp{sdp=rtsp://:5511/}'", "--sout-keep", "--quiet", "\""]
+CMD ["su", "mao", "-c", "\"", "cvlc", "/home/maoMedia", "--repeat", "--sout '#rtp{sdp=rtsp://:5511/}'", "--sout-keep", "--quiet", "\""]
