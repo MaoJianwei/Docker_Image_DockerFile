@@ -1,8 +1,10 @@
-FROM alpine:latest
+FROM ubuntu:latest
 MAINTAINER Mao Jianwei <maojianwei2020@gmail.com>
 
-RUN apk add -U --no-cache vlc
+RUN apt update \
+    && apt install -y vlc \
+    && rm -rf /var/lib/apt/lists/*
 
 EXPOSE 5511
 
-CMD ["cvlc", "-vvv /home/maoMedia", "--sout '#rtp{sdp=rtsp://:5511/}'", "--sout-keep", "--quiet"]
+CMD ["cvlc", "/home/maoMedia", "--sout '#rtp{sdp=rtsp://:5511/}'", "--sout-keep", "--quiet"]
