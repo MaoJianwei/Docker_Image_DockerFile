@@ -5,7 +5,7 @@ RUN apt-get update \
     && apt-get install -y vlc \
     && rm -rf /var/lib/apt/lists/*
 
-RUN useradd mao
+RUN useradd -M mao
 
 EXPOSE 5511
 

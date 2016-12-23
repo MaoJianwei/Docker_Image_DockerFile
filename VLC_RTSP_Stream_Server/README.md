@@ -20,7 +20,7 @@ sudo docker run -d -p 5511:5511 -v /home/mao/maoMedia/:/home --name maoRTSP maoj
 
 You can watch the media at this link:
 
-rtsp://\<ip-address or DNS name\>:5511/
+rtsp://<ip-address or DNS name>:5511/
 
 ---------------------------------------------
 
