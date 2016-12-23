@@ -1,8 +1,8 @@
 FROM ubuntu:latest
 MAINTAINER Mao Jianwei <maojianwei2020@gmail.com>
 
-RUN apt update \
-    && apt install -y vlc \
+RUN apt-get update \
+    && apt-get install -y vlc \
     && rm -rf /var/lib/apt/lists/*
 
 EXPOSE 5511
