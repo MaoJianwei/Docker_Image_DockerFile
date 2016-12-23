@@ -1,1 +1,1 @@
-qingdaotest
+sudo docker run -d -p 5511:5511 -v /home/mao/maoMedia/:/home --name maoRTSP maojianwei2020/vlc_rtsp_stream_server
