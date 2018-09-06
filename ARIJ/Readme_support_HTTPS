@@ -1,5 +1,10 @@
-To support HTTPS, add the following to conf/server.xml
+To support HTTPS, 
 
+Come into container terminal:
+sudo docker exec -i -t <container-name> bash
+
+
+Add the following to C:\Program Files\Atlassian\JIRA\conf\server.xml
 <Connector 
 	SSLEnabled="true" 
 	acceptCount="100" 
@@ -21,4 +26,19 @@ To support HTTPS, add the following to conf/server.xml
 	secure="true" 
 	sslProtocol="TLS" 
 	useBodyEncodingForURI="true"/>
-  
+
+
+Add the following to C:\Program Files\Atlassian\JIRA\atlassian-jira\WEB-INF\web.xml
+	<!-- Redirect HTTP to HTTPS -->
+	<security-constraint>
+		<display-name>HTTP to HTTPs Redirection</display-name>
+		<web-resource-collection>
+			<web-resource-name>all-except-attachments</web-resource-name>
+			<url-pattern>*.jsp</url-pattern>
+			<url-pattern>*.jspa</url-pattern>
+			<url-pattern>/browse/*</url-pattern>
+		</web-resource-collection>
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
