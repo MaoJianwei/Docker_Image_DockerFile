@@ -28,8 +28,8 @@ RUN set -x \
 COPY "atlassian-extras-3.2.jar" "${JIRA_INSTALL}/atlassian-jira/WEB-INF/lib/"
 RUN chmod 777 "${JIRA_INSTALL}/atlassian-jira/WEB-INF/lib/atlassian-extras-3.2.jar"
 
-# Expose default HTTP connector port.
-EXPOSE 8080
+# Expose default HTTP & HTTPS connector port.
+EXPOSE 8080 443
 
 
 # Set volume mount points for installation and home directory. Changes to the
