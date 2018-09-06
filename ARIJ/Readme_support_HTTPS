@@ -1,0 +1,24 @@
+To support HTTPS, add the following to conf/server.xml
+
+<Connector 
+	SSLEnabled="true" 
+	acceptCount="100" 
+	clientAuth="false" 
+	connectionTimeout="20000" 
+	disableUploadTimeout="true" 
+	enableLookups="false" 
+	keyAlias="<alias>" 
+	keystoreFile="<path to JKS file>" 
+	keystorePass="<password of JKS>" 
+	keystoreType="JKS" 
+	maxHttpHeaderSize="8192" 
+	maxSpareThreads="75" 
+	maxThreads="150" 
+	minSpareThreads="25" 
+	port="443" 
+	protocol="org.apache.coyote.http11.Http11NioProtocol" 
+	scheme="https" 
+	secure="true" 
+	sslProtocol="TLS" 
+	useBodyEncodingForURI="true"/>
+  
