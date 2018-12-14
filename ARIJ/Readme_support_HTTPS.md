@@ -1,10 +1,17 @@
-To support HTTPS, 
+# Run
+sudo docker run -idt --name xxx --restart always -v /home/<custom-dir>/:/var/xxx/xxx -p 8080:8080 -p 443:443 maojianwei2020/xxx:xxx
+
+# Mysql
+sudo docker run -idt --name MySql --restart always -v /home/mao/maodisk/maoDataBase/:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=<password> -p 3306:3306 mysql:5.7.23
+
+# To support HTTPS
 
 Come into container terminal:
 sudo docker exec -i -t <container-name> bash
 
 
 Add the following to C:\Program Files\Atlassian\JIRA\conf\server.xml
+```
 <Connector 
 	SSLEnabled="true" 
 	acceptCount="100" 
@@ -26,9 +33,10 @@ Add the following to C:\Program Files\Atlassian\JIRA\conf\server.xml
 	secure="true" 
 	sslProtocol="TLS" 
 	useBodyEncodingForURI="true"/>
-
+```
 
 Add the following to C:\Program Files\Atlassian\JIRA\atlassian-jira\WEB-INF\web.xml
+```
 	<!-- Redirect HTTP to HTTPS -->
 	<security-constraint>
 		<display-name>HTTP to HTTPs Redirection</display-name>
@@ -42,3 +50,4 @@ Add the following to C:\Program Files\Atlassian\JIRA\atlassian-jira\WEB-INF\web.
 			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
 		</user-data-constraint>
 	</security-constraint>
+```
