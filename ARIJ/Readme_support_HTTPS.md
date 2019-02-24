@@ -1,5 +1,5 @@
 # Run
-sudo docker run -idt --name xxx --restart always -v /home/<custom-dir>/:/var/xxx/xxx -p 8080:8080 -p 443:443 maojianwei2020/xxx:xxx
+sudo docker run -idt --name xxx --restart always -v /home/\<custom-dir\>/:/var/xxx/xxx -p 8080:8080 -p 443:443 maojianwei2020/xxx:xxx
 
 # Mysql
 sudo docker run -idt --name MySql --restart always -v /home/mao/maodisk/maoDataBase/:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=<password> -p 3306:3306 mysql:5.7.23
