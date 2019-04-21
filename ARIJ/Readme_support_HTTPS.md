@@ -5,6 +5,7 @@ sudo docker run -idt --name xxx --restart always -v /home/\<custom-dir\>/:/var/x
 sudo docker run -idt --name MySql --restart always -v /home/mao/maodisk/maoDataBase/:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=<password> -p 3306:3306 mysql:5.7.23
 
 mycli -u root
+
 create database arij CHARACTER SET utf8 COLLATE utf8_bin
 
 # To support HTTPS
@@ -15,6 +16,7 @@ sudo docker exec -i -t <container-name> bash
 
 Add the following to C:\Program Files\Atlassian\JIRA\conf\server.xml
 ```
+<!-- We may not need keyAlias property -->
 <Connector 
 	SSLEnabled="true" 
 	acceptCount="100" 
