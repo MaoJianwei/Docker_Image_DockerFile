@@ -17,6 +17,7 @@ sudo docker exec -i -t <container-name> bash
 Add the following to C:\Program Files\Atlassian\JIRA\conf\server.xml
 ```
 <!-- We may not need keyAlias property, 8.1.0 -->
+<!-- relaxedPathChars and relaxedQueryChars is required by 8.1.0+ -->
 <Connector 
 	SSLEnabled="true" 
 	acceptCount="100" 
@@ -38,8 +39,6 @@ Add the following to C:\Program Files\Atlassian\JIRA\conf\server.xml
 	secure="true" 
 	sslProtocol="TLS" 
 	useBodyEncodingForURI="true"
-	
-	<!-- required by 8.1.0+ -->
 	relaxedPathChars="[]|" relaxedQueryChars="[]|{}^&#x5c;&#x60;&quot;&lt;&gt;"
 />
 ```
