@@ -8,4 +8,4 @@ RUN chmod 777 /smk-x86-musl-static
 
 EXPOSE 1688
 
-CMD ["/smk-x86-musl-static", "-d", "-R", "180d", "-A", "1h", "-e", "-v"]
+CMD ["/smk-x86-musl-static", "-D", "-R", "180d", "-A", "1h", "-e", "-v"]
