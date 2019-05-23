@@ -8,4 +8,4 @@ RUN chmod 777 /smk-x64-musl-static
 
 EXPOSE 1688
 
-CMD ["/vlmcsd", "-d", "-R", "180d", "-A", "1h", "-e", "-v"]
+CMD ["/smk-x64-musl-static", "-d", "-R", "180d", "-A", "1h", "-e", "-v"]
