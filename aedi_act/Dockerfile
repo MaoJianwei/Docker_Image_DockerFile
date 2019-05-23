@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM alpine:3.9
 MAINTAINER Jianwei Mao <maojianwei2020@gmail.com>
 
 WORKDIR /
