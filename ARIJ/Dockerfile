@@ -3,7 +3,7 @@ FROM openjdk:8-alpine
 # Configuration variables.
 ENV JIRA_HOME     /var/atlassian/jira
 ENV JIRA_INSTALL  /opt/atlassian/jira
-ENV JIRA_VERSION  7.13.3
+ENV JIRA_VERSION  7.13.17
 # Attention !!! - Mao: UI of 7.x is more efficient tan 8.x
 
 # Install Atlassian JIRA and helper tools and setup initial home
