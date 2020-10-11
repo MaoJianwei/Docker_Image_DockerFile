@@ -1,12 +1,20 @@
 # Run
-sudo docker run -idt --name xxx --restart always -v /home/\<custom-dir\>/:/var/xxx/xxx -p 8080:8080 -p 443:443 maojianwei2020/xxx:xxx
+sudo docker run -idt --name xxx -v /home/\<custom-dir\>/:/var/xxx/xxx -p 8080:8080 -p 443:443 maojianwei2020/xxx:xxx
 
 # Mysql
+### ARIJ 7.x
 sudo docker run -idt --name MySql --restart always -v /home/mao/maodisk/maoDataBase/:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=<password> -p 3306:3306 mysql:5.7.23
 
 mycli -u root
 
 create database arij CHARACTER SET utf8 COLLATE utf8_bin
+
+### ARIJ 8.x
+sudo docker run -idt --name MySql --restart always -v /home/mao/maodisk/maoDataBase/:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=<password> -p 3306:3306 maojianwei2020/mysql_jira_utf8mb4:5.7.23
+
+mycli -u root
+
+create database arij CHARACTER SET utf8mb4 COLLATE utf8mb4_bin
 
 # To support HTTPS
 
