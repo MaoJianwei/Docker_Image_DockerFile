@@ -39,7 +39,7 @@ spec:
     spec:
       containers:
       - name: registry
-        image: maojianwei2020/registry:2.7.1-mao
+        image: maojianwei2020/registry:2.7.1.1-mao
         ports:
           - name: register-port
             containerPort: 5000
@@ -47,7 +47,7 @@ spec:
           - name: nfs-registry
             mountPath: "/var/lib/registry"
       - name: gui
-        image: maojianwei2020/registry-gui:2.0-mao
+        image: maojianwei2020/registry-gui:2.3-mao
         ports:
           - name: gui-port
             containerPort: 80
