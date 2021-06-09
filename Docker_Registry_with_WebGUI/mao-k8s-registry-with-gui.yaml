@@ -39,7 +39,7 @@ spec:
     spec:
       containers:
       - name: registry
-        image: maojianwei2020/registry:2.7.1.8-mao
+        image: maojianwei2020/registry:2.7.1.9-mao
         ports:
           - name: register-port
             containerPort: 5000
