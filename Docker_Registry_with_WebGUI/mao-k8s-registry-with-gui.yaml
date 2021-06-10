@@ -51,6 +51,8 @@ spec:
 #        env:
 #          - name: DELETE_IMAGES
 #            value: "false"
+#          - name: REGISTRY_TITLE
+#            value: "Mao Docker Registry GUI"
         ports:
           - name: gui-port
             containerPort: 80
