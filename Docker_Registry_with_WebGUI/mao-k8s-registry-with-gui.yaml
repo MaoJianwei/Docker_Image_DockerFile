@@ -48,6 +48,9 @@ spec:
             mountPath: "/var/lib/registry"
       - name: gui
         image: maojianwei2020/registry-gui:2.3-mao
+#        env:
+#          - name: DELETE_IMAGES
+#            value: "false"
         ports:
           - name: gui-port
             containerPort: 80
