@@ -1,9 +1,8 @@
 # Mao Nginx server with RTMP module - Docker image
 
 ## Usage
-
-mkdir 
-
+ 
+Setup container:
 ```
 mkdir -p /home/user/n5/conf
 mkdir -p /home/user/n5/log
@@ -20,7 +19,10 @@ sudo docker run -idt \
 	--name nginx-rtmp \
 	maojianwei2020/nginx-rtmp:1.0
 ```
-
+Push USB camera stream:
+```
+ffmpeg -y -i /dev/video0 -vcodec libx264 -f flv rtmp://<rtmp-ip>:<rtmp-port>/hls/camera
+```
 ## Update Notes
 ### Release 1.0
 1. Receive RTMP live stream.
