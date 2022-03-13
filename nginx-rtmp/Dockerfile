@@ -14,7 +14,6 @@ RUN chmod -R 777 "/nginx-bin/"
 
 COPY "run-nginx-rtmp.sh" "/"
 RUN chmod 777 "/run-nginx-rtmp.sh"
-WORKDIR /
 
 VOLUME ["/nginx-conf/", "/nginx-log/", "/nginx-live-hls/"]
 
@@ -22,4 +21,5 @@ EXPOSE 80 443
 
 STOPSIGNAL SIGQUIT
 
-ENTRYPOINT ["./run-nginx-rtmp.sh"]
+WORKDIR /
+ENTRYPOINT ["/run-nginx-rtmp.sh"]
