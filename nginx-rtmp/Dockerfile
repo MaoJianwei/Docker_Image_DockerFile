@@ -20,8 +20,8 @@ VOLUME ["/nginx-conf/", "/nginx-log/", "/nginx-live-hls/"]
 # RTMP
 EXPOSE 1935
 
-# backup
-EXPOSE 80 443
+# Watch HLS live video and record video
+EXPOSE 80
 
 STOPSIGNAL SIGQUIT
 
