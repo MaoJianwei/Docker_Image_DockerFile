@@ -7,7 +7,7 @@ RUN apt-get update \
     && chmod -R 777 /nginx-bin/ \
     && mkdir -p /nginx-conf/ \
     && mkdir -p /nginx-log/ \
-    && mkdir -l /nginx-live-hls/
+    && mkdir -p /nginx-live-hls/
 
 COPY "./bin/*" "/nginx-bin/"
 RUN chmod 777 "/nginx-bin/*"
