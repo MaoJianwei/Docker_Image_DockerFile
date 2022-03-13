@@ -5,4 +5,4 @@ mkdir -p /nginx-conf/sites-enabled/
 mkdir -p /nginx-live-hls/record/
 mkdir -p /nginx-live-hls/mp4/
 
-/nginx-bin/nginx-rtmp -c /nginx-conf/nginx.conf
+/nginx-bin/nginx-rtmp -c /nginx-conf/nginx.conf -g "daemon off;"
