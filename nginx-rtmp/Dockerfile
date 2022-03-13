@@ -10,7 +10,7 @@ RUN apt-get update \
     && mkdir -p /nginx-live-hls/
 
 COPY "./bin/*" "/nginx-bin/"
-RUN chmod 777 "/nginx-bin/*"
+RUN chmod -R 777 "/nginx-bin/"
 
 COPY "run-nginx-rtmp.sh" "/"
 RUN chmod 777 "/run-nginx-rtmp.sh"
