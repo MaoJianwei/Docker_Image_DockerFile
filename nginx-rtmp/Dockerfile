@@ -17,7 +17,9 @@ RUN chmod 777 "/run-nginx-rtmp.sh"
 
 VOLUME ["/nginx-conf/", "/nginx-log/", "/nginx-live-hls/"]
 
-EXPOSE 80 443
+
+EXPOSE 1935 # RTMP
+EXPOSE 80 443 # backup
 
 STOPSIGNAL SIGQUIT
 
